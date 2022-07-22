@@ -16,20 +16,18 @@ const styles = {
     menuItem: 'cursor-pointer font-bold hover:text-green-500 duration-300'
 }
 
+// Make dynamic later
+const isAuthenticated = true
+const formattedAccount = '0xcd...1E4D'
+
 const Header = () => {
     return (
-        // <div className={styles.container}>
-        <div className='flex w-screen h-16 bg-black px-24 py-3 mb-5 fixed'>
-            {/* <div className={styles.LeftHeader}> */}
-            <div className='flex flex-1'>
-
-
+        <div className={styles.container}>
+            <div className={styles.LeftHeader}>
                 {/* <Image /> */}
             </div>
-            {/* <div className={styles.searchWrapper}> */}
-            <div className='flex flex-1'>
-                {/* <div className={styles.searchInputContainer}> */}
-                <div className='text-white items-center flex flex-1 ml-64 border border-gray-400 mr-64 hover:bg-[#1E2123] duration-300 p-3 rounded-lg'>
+            <div className={styles.searchWrapper}>
+                <div className={styles.searchInputContainer}>
                     <AiOutlineSearch className={styles.searchIcon} />
                     <div className={styles.searchInputWrapper}>
                         <input placeholder='Search...' className={styles.searchInput} />
@@ -41,9 +39,17 @@ const Header = () => {
                 <div className={styles.menuItem}>Portfolio</div>
                 <div className={styles.menuItem}>Cash</div>
                 <div className={styles.menuItem}>Messages</div>
-                <div className={styles.menuItem} onClick={() => connectWallet()}>Login</div>
+                {isAuthenticated && (
+                    <>
+                        <div className={styles.menuItem}>format</div>
+                        <div className={styles.menuItem} onClick={() => connectWallet()}>Logout</div>
+                    </>
+                )}
+                {!isAuthenticated && (
+                    <div className={styles.menuItem} onClick={() => connectWallet()}>Login</div>
+                )}
             </div>
-        </div>
+        </div >
     )
 }
 

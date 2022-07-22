@@ -30,32 +30,22 @@ const styles = {
 
 export default function Home() {
   return (
-    // <div className={styles.wrapper}>
-    <div className='w-screen h-screen flex flex-col'>
+    <div className={styles.wrapper}>
       <Header />
-      {/* <div className={styles.mainContainer}> */}
-      <div className='w-2/3 h-full m-auto flex mt-16'>
-        {/* <div className={styles.leftMain}> */}
-        <div className='flex flex-col w-3/4 h-full p-6 overflow-y-scroll'>
-          {/* <div className={styles.portfolioAmountContainer}> */}
-          <div className='flex flex-col'>
-            {/* <div className={styles.portfolioAmount}>23 ETH</div> */}
-            <div className='text-white text-4xl'>23 ETH</div>
-            {/* <div className={styles.portfolioPercent}> */}
-            <div className='text-white font-bold text-sm'>
-              +0.0000(+0.57%)
-              {/* <span className={styles.pastHour}>Past Hour</span> */}
-              <span className='text-gray-400'>Past Hour</span>
+      <div className={styles.mainContainer}>
+        <div className={styles.leftMain}>
+          <div className={styles.portfolioAmountContainer}>
+            <div className={styles.portfolioAmount}>23 ETH</div>
+            <div className={styles.portfolioPercent}>
+              <span className={styles.pastHour}>Past Hour</span>
             </div>
           </div>
           <div>
-            {/* <div className={styles.chartContainer}> */}
-            <div className='text-5xl flex justify-center w-full h-1/3 text-white mt-11 mb-11'>
+            <div className={styles.chartContainer}>
               {/* <PortfolioChart /> */}
             </div>
           </div>
-          {/* <div className={styles.buyingPowerContainer}> */}
-          <div className='w-full border-t mb-24 border-b h-16 border-[#30363b] flex justify-between item'>
+          <div className={styles.buyingPowerContainer}>
             <div className={styles.buyingPowerTitle}>Buying Power</div>
             <div className={styles.buyingPowerAmount}>12 ETH</div>
           </div>
@@ -70,8 +60,7 @@ export default function Home() {
           </div>
           {/* <Notice /> */}
         </div>
-        {/* <div className={styles.rightMain}> */}
-        <div className='flex flex-col flex-1 h-4/5 bh-[#1E2123] mt-6 rounded-lg overflow-y-scroll noScroll'>
+        <div className={styles.rightMain}>
           <div className={styles.rightMainItem}>
             <div className={styles.itemTitle}>Crypto Currencies</div>
             <BiDotsHorizontalRounded className={styles.moreOptions} />
