@@ -6,8 +6,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <MoralisProvider
       // This should be in a .env file
-      serverUrl='https://jhz8nlkoa8u0.usemoralis.com:2053/server'
-      appId='5JxS2tbyo2INrKlCBo8Xmr3TnP3vuh573lWHcsuf'
+      serverUrl='https://by5sdi5vqavn.usemoralis.com:2053/server'
+      appId='R0rEzYAEWk8Yq6VbHVft53mvlPnlGRvXwd5SgbbF'
     >
       <RobinhoodProvider>
         <Component {...pageProps} />
